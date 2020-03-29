@@ -52,6 +52,10 @@ public class GraphQLController {
             body = "";
         }
 
+        if (contentType != null) {
+            contentType = contentType.split(";")[0];
+        }
+
         // https://graphql.org/learn/serving-over-http/#post-request
         //
         // A standard GraphQL POST request should use the application/json content type,
